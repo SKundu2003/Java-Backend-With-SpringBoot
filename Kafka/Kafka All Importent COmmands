@@ -1,0 +1,27 @@
+
+//Starting the Kafka Broker------------------------->>
+"bin/kafka-server-start.sh config/server.properties"
+
+
+//To see Already Created topics ------------------------>>
+"bin/kafka-topics.sh --list --bootstrap-server localhost:9092"
+
+
+//To create a new topic
+"bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic my-topic"
+
+
+
+
+//To delete a existing topic
+"bin/kafka-topics.sh --delete --bootstrap-server localhost:9092 --topic my-topic"
+
+
+
+//To start kafka producer
+"bin/kafka-console-producer.sh --bootstrap-server localhost:9092 --topic my-topic"
+
+
+
+//To start a Kafka consumer
+"bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic my-topic --from-beginning" --->>The --from-beginning option tells the consumer to start reading messages from the earliest available offset.
