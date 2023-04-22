@@ -13,7 +13,8 @@ public class HelloController {
     @Autowired  //dependency injection
 
     HelloWorld helloWorld;
-//    @Qualifier
+
+//    @Qualifier(value = "helloWorld")
 //    private HelloWorld helloWorld;
 
     @GetMapping("/func")

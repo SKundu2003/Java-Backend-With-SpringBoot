@@ -9,7 +9,7 @@ public class Application2Application {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context =SpringApplication.run(Application2Application.class, args);
-		test obj = context.getBean(test.class);
+		test obj = context.getBean(test.class); //used al @Autowired
 		obj.show();
 	}
 

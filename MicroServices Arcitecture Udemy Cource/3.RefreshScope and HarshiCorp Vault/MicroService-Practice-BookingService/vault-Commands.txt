@@ -1,0 +1,28 @@
+To start the vault server in ev mode-->
+vault server --dev 00>this will provide auto generated token
+vault server --dev --dev-root-token-id="00000000-0000-0000-0000-000000000000" -->set token
+
+To put the json file into secet -->
+vault kv put secret/{any name} @{name of the json file} -->example
+vault kv put secret/booking-service @booking-service.json
+
+To see the vault secret data-->
+vault kv get secret/{any name}
+vault kv put secret/booking-service
+
+Needed dependencies for vault
+<dependencies>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-vault-config</artifactId>
+    </dependency>
+
+
+
+Then we need to add some code in bootstrap.properties file
+In our case it's running locally -->
+spring.cloud.vault.host=localhost
+spring.cloud.vault.port=8200
+spring.cloud.vault.scheme=http
+spring.cloud.vault.authentication=token
+spring.cloud.vault.token=00000000-0000-0000-0000-000000000000

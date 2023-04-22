@@ -3,7 +3,7 @@ package com.jpabeans.jpabeans_class;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-
+@Configuration
 public class HelloWorld {
     private String msg;
     private String data;
@@ -11,6 +11,9 @@ public class HelloWorld {
     public HelloWorld(String msg, String data) {
         this.msg = msg;
         this.data = data;
+    }
+
+    public HelloWorld() {
     }
 
     public String getMsg() {
